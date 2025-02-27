@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Science Project</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">History of Computer Science</h1>
+        <div id="post-container">
+                <div class="container">
+    
+                    <!-- Origin of Computer -->
+                    <div class="box">
+                        <h3>Origin of Computer</h3>
+                        <p>The history of computers dates back to ancient times when humans used simple counting tools like the <b>Abacus (3000 BCE).</b> Later, in <b>1642</b>, Blaise Pascal invented the <b>Pascaline</b>, a mechanical calculator.</p>
+                       
+                       <img src="charles babbage.jpeg"height=150px>
+                        <p>In <b>1837, Charles Babbage</b> designed the <b>Analytical Engine</b>, which was the first concept of a general-purpose programmable computer.</p>
+                        <p>Modern computing began in the 20th century with the development of electronic computers:</p>
+                        <ul>
+
+
+                              <img src="1st generation.jpg"height=150px>
+                              <br>
+                            <li><b>First-generation (1940s-1950s)</b>: Used vacuum tubes (e.g., ENIAC).</li>
+                            <p>The first generation of a computer is also known as vacuum tube computer, it uses vacuum tubes as its circuit and magnetic drums as its memory. It is very slow and can only process one problem at a time, consuming a high amount of energy and generating a lot of heat.</p>
+                           
+                            <img src="2nd generation.jpg"height=150px>
+                            <li><b>Second-generation (1950s-1960s)</b>: Used transistors, making computers smaller and faster.</li>
+                            <p>In the second generation of computers, the vacuum tubes were replaced by transistors, making them faster, lightweight, and more energy-efficient.</p>
+                           
+                           <img src="3rd generation.jpg"height=150px>
+                            <li><b>Third-generation (1960s-1970s)</b>: Introduced Integrated Circuits (ICs).</li>
+                            <p>The third generation computers used small chips like Integrated Circuits (ICs), which were more advanced than previous generations. It was also the first generation to support programming languages like COBOL.</p>
+                           
+                           <img src="4th generation.jpg"height=150px>
+                            <li><b>Fourth-generation (1970s-present)</b>: Revolutionized by microprocessors, leading to personal computers.</li>
+                            
+                            <img src="5th generation.jpg"height=150px>
+                            <li><b>Fifth-generation (Future)</b>: Focuses on AI and quantum computing.</li>
+                        </ul>
+                    </div>
+            
+                <button class="toggle" onclick="toggleContent(this)">Read More</button>
+                <div class="extra-content" style="display: none;">
+    
+        </div>
+        <button id="loadMore">More Posts</button>
+    </div>
+    
+    <script>
+        function toggleContent(button) {
+            let content = button.nextElementSibling;
+            if (content.style.display === "none") {
+                content.style.display = "block";
+                button.textContent = "Read Less";
+            } else {
+                content.style.display = "none";
+                button.textContent = "Read More";
+            }
+        }
+
+        document.getElementById("loadMore").addEventListener("click", function() {
+            let newPost = document.createElement("div");
+            newPost.classList.add("post");
+            newPost.innerHTML = `
+               
+
+            <div class="box">
+                    <h3>Modern Computer Science</h3>
+
+                    <!-- Programming Section -->
+                    <div class="sub-box">
+                        <h4>Programming</h4>
+                        <p>Programming is the process of writing instructions that a computer can execute. The first programming language was <b>Fortran (1957)</b>, designed for scientific computing. Later, <b>COBOL (1959)</b> was introduced for business applications.</p>
+                        <p>Evolution of programming languages:</p>
+                        <ul>
+                            <li><b>C (1972)</b>: The foundation of modern languages. <a href="https://www.geeksforgeeks.org/c-language-introduction/?ref=lbp">Introduction of C</a></li>
+                            <li><b>Python (1991)</b>: Popular for AI, data science, and web development. <a href="https://www.geeksforgeeks.org/introduction-to-python/">Introduction Of Python</a></li>
+                            <li><b>JavaScript (1995)</b>: Essential for web development. <a href="https://www.geeksforgeeks.org/introduction-to-javascript/">Introduction Of JavaScript</a></li>
+                            <li><b>Swift (2014)</b>: Used for iOS app development. <a href="https://www.geeksforgeeks.org/introduction-to-swift-programming/">Introduction of Swift</a></li>
+                        </ul>
+                        <p>Programming is widely used in:</p>
+                        <ul>
+                            <li>Web development (HTML, CSS, JavaScript).</li>
+                            <li>Mobile app development (Swift, Kotlin).</li>
+                            <li>Game development (Unity, Unreal Engine).</li>
+                            
+                        </ul>
+                    </div>
+
+                
+                <button class="toggle" onclick="toggleContent(this)">Read More</button>
+                <div class="extra-content" style="display: none;">
+                       <!-- Artificial Intelligence Section -->
+                    <div class="sub-box">
+                        <h4>Artificial Intelligence</h4>
+                       <img src="ai contain.jpg"height=150px>
+                        <p>Artificial Intelligence (AI) is the simulation of human intelligence in machines. The concept was first introduced in <b>1956</b> by John McCarthy. AI is divided into:</p>
+                        <ul>
+                          
+                          <li><b>Machine Learning (ML)</b>: Machines learn from data.</li>
+                            <li><b>Deep Learning</b>: AI using neural networks for facial recognition, etc.</li>
+                            <li><b>Natural Language Processing (NLP)</b>: AI understanding human language (e.g., ChatGPT, Gemini).</li>
+                        </ul>
+                        <p>AI is used in:</p>
+                        <ul>
+                            <li>Self-driving cars (Tesla, Waymo).</li>
+                            <li>Healthcare diagnostics (AI-powered X-rays, disease detection).</li>
+                            <li>Robotics (Sophia, industrial automation).</li>
+                            <li>Cybersecurity (AI-based fraud detection).</li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+            `;
+            document.getElementById("post-container").appendChild(newPost);
+        });
+    </script>
+
+    <style>
+        body {
+            background-color: #0f0f0f;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            width: 60%;
+            margin: auto;
+            padding: 20px;
+            box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.8);
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.9);
+        }
+        .title {
+            font-size: 2em;
+            text-shadow: 0px 0px 10px cyan;
+        }
+        .post {
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.5);
+        }
+        .toggle {
+            padding: 5px 10px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            background: cyan;
+            color: #000;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+        .toggle:hover {
+            background: rgba(0, 255, 255, 0.7);
+            box-shadow: 0px 0px 10px cyan;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            background: cyan;
+            color: #000;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 20px;
+        }
+        button:hover {
+            background: rgba(0, 255, 255, 0.7);
+            box-shadow: 0px 0px 10px cyan;
+        }
+        .extra-content {
+            margin-top: 10px;
+        }
+    </style>
+</body>
+</html>
